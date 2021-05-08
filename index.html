@@ -3,58 +3,70 @@
 <head>
     <title>elo</title>
     <style>
-        body {
-            background-color: #2D2D2D;
-        }
-
-        h1 {
-            color: #C26356;
-            font-size: 30px;
-            font-family: Menlo, Monaco, fixed-width;
-        }
-
-        p {
-            color: white;
-            font-family: "Source Code Pro", Menlo, Monaco, fixed-width;
-        }
+        h1 {text-align: center;}
     </style>
-    <meta name="description" content="Smol website run by Wraitho ^w^"/>
+    <meta name="description" content="Smol website run by Wraitho ^w^" />
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
 <body>
-    <h1>Welcome to my webiste!</h1>
-    <p>Oh hello there! I'm Flavio, also know as Wraitho, and this is my personal website.
-        <br>
-        Pretty empty right?
-        Well, I don't what know to put in here 😅
-        <br>
-        <br>
-        Ok no, so I'm a 19 years old boi that lives in 🇮🇹, and this are my hoobies and passions:
-        <br>
-        <br>
-        - I really love listening to music, both classic and new. This is my <a href="https://open.spotify.com/playlist/08KQo7f65Tycb801Oa4nap?si=491d6191ac6f4aad">Spotify Playlist</a> if you want to take a brief look 👀
-        <br>
-        <br>
-        - Hugh fan of Tech, especially Programming and Ethical stuff :P
-        <br>
-        <br>
-        - I'm also a small Weeb.
-        <br>
-        <br>
-        - Furry boi, and my sona is a Protogen :3
-        <br>
-        <br>
-        - I also like immersive stories, like Post-Apocalyptic and Fantasy ones :P
-        <br>
-        <br>
-        - Also, 🎮, most likely Indie 2D Games or Immersive Story ones, example: <a href="https://store.steampowered.com/app/481510/Night_in_the_Woods/">Night In The Woods</a> and <a href="https://store.steampowered.com/app/420530/OneShot/">Oneshot </a>
-        <br>
-        <br>
-        <br>
-        Also, if you want to stalker- know me better, this is my <a href="https://twitter.com/zextrem_dev">Twitter</a> and my Discord: Wraith#5007
-        <br>
-        See ya online :3
+<h1>Welcome to my webiste!</h1>
 
-    </p>
+<div class="full-screen">
+    <div class='container'>
+        <span class="error-num"></span>
+        <div class='eye'></div>
+        <div class='eye'></div>
+        <p class="sub-text">Oh hello there! I'm Flavio, also know as Wraitho, and this is my personal website.
+            <br>
+            Pretty empty right?
+            Well, I don't what know to put in here 😅
+            <br>
+            <br>
+            Ok no, so I'm a 19 years old boi that lives in 🇮🇹, and this are my hoobies and passions:
+            <br>
+            <br>
+            - I really love listening to music, both classic and new. This is my <a href="https://open.spotify.com/playlist/08KQo7f65Tycb801Oa4nap?si=491d6191ac6f4aad">Spotify Playlist</a> if you want to take a brief look 👀
+            <br>
+            <br>
+            - Hugh fan of Tech, especially Programming and Ethical stuff :P
+            <br>
+            <br>
+            - I'm also a small Weeb.
+            <br>
+            <br>
+            - Furry boi, and my sona is a Protogen :3
+            <br>
+            <br>
+            - I also like immersive stories, like Post-Apocalyptic and Fantasy ones :P
+            <br>
+            <br>
+            - Also, 🎮, most likely Indie 2D Games or Immersive Story ones, example: <a href="https://store.steampowered.com/app/481510/Night_in_the_Woods/">Night In The Woods</a> and <a href="https://store.steampowered.com/app/420530/OneShot/">Oneshot </a>
+            <br>
+            <br>
+            <br>
+            Also, if you want to stalker- know me better, this is my <a href="https://twitter.com/zextrem_dev">Twitter</a> and my Discord: Wraith#5007
+            <br>
+            See ya online :3
+        </p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(".full-screen").mousemove(function(event) {
+        var eye = $(".eye");
+        var x = (eye.offset().left) + (eye.width() / 2);
+        var y = (eye.offset().top) + (eye.height() / 2);
+        var rad = Math.atan2(event.pageX - x, event.pageY - y);
+        var rot = (rad * (180 / Math.PI) * -1) + 180;
+        eye.css({
+            '-webkit-transform': 'rotate(' + rot + 'deg)',
+            '-moz-transform': 'rotate(' + rot + 'deg)',
+            '-ms-transform': 'rotate(' + rot + 'deg)',
+            'transform': 'rotate(' + rot + 'deg)'
+        });
+    });
+
+</script>
 </body>
 </html>
