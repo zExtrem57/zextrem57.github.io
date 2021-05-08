@@ -1,0 +1,62 @@
+body {
+    background-color: #2D2D2D;
+}
+
+h1 {
+    color: #C26356;
+    font-size: 30px;
+    font-family: Menlo, Monaco, fixed-width;
+}
+
+p {
+    color: white;
+    font-family: "Source Code Pro", Menlo, Monaco, fixed-width;
+}
+.full-screen {
+    width: 98vw;
+    height: 90vh;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+}
+
+.container {
+    padding-top: 4em;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.error-num {
+    font-size: 8em;
+}
+
+.eye {
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    height: 100px;
+    position: relative;
+    width: 100px;
+}
+
+.eye::after {
+    background: #000;
+    border-radius: 50%;
+    bottom: 56.1px;
+    content: ' ';
+    height: 33px;
+    position: absolute;
+    right: 33px;
+    width: 33px;
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightgray;
+}
